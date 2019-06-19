@@ -1,0 +1,103 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Java Script</title>
+</head>
+<body>
+<h2>1)Js Variable Function and events</h2>
+<button onclick="student()">Click here To See Student Information</button>
+<button onclick="hideinfo()">Click here To Hide Student Information</button>
+<h3 id="Name">will change the content</h3>
+<h1>2)Js Operators</h1>
+
+<p id="fact"></p>
+</body>
+<script type="text/javascript">
+	// JS variable
+	function student(){			//js function
+	var firstName,lastName,Email;  //variable Declaration
+	firstName="Mohsin";           //varialbe assigned vaue
+	lastName="Iqbal";
+	Email="2016cs506@student.uet.edu.pk";
+	
+	document.getElementById("Name").innerHTML="<i style='color:red'>FirstName:</i> " +firstName+" <i style='color:red'>LastName: </i>"+lastName+" <i style='color:red'>Email:</i> "+Email;
+	document.getElementById("Name").style.display="block";
+
+};
+function hideinfo(){
+	document.getElementById("Name").style.display="none";
+};
+
+var n=prompt("Enter Number whose Factorail you want to calculate");
+function factorial(n)
+{
+	if(n==0||n==1)
+	{
+		return 1;
+	}
+	else{
+		return factorial(n-1)*n;
+	}
+}
+document.getElementById("fact").innerHTML="Factorail of + " +n+" is "+factorial(n); 
+
+</script>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Calculator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        
+  <div class="container ">
+  	<div class="row ">
+  		<div class="col-12 " style="overflow:hidden;">
+  			<center>
+  			<div id="calc">
+          <form name="calculator" >
+            <input type="text" name="answer" id="result"  style="margin-bottom:20px;margin-top: 20px" size="31"  />            
+            <div class="form-group">
+            <input type="button" value=" 1 " class="btn btn-primary " onclick="make_String('1')" />
+            <input type="button" value=" 2 " onclick="make_String('2')" class="btn-primary btn " style="margin-left: 20px;" />
+            <input type="button" value=" 3 " onclick="make_String('3')" class="btn-primary btn " style="margin-left: 20px;"/>
+            <input type="button" value=" + " onclick="make_String('+')" class="btn-success btn " style="margin-left: 20px;"/>
+            </div>
+            <div class="form-group">
+            <input type="button" value=" 4 " onclick="make_String('4')" class="btn-primary btn " />
+            <input type="button" value=" 5 " onclick="make_String('5')" class="btn-primary btn " style="margin-left: 20px;"/>
+            <input type="button" value=" 6 " onclick="make_String('6')"  class="btn-primary btn  " style="margin-left: 20px;"/>
+            <input type="button" value=" - " onclick="make_String('-')"  class="btn-success btn " style="margin-left: 20px;"/>
+           </div>
+          <div class="form-group">
+            <input type="button" value=" 7 " onclick="make_String('7')" class="btn-primary btn " />
+            <input type="button" value=" 8 " onclick="make_String('8')" class="btn-primary btn " style="margin-left: 20px;"/>
+            <input type="button" value=" 9 " onclick="make_String('9')" class="btn-primary btn "  style="margin-left: 20px;"/>
+            <input type="button" value=" x " onclick="make_String('*')" class="btn-success btn " style="margin-left: 20px;"/>
+           </div>
+        	<div class="form-group">
+            <input type="button" value=" C " onclick="clear_result()" class="btn-success btn " />
+            <input type="button" value=" 0 " onclick="make_String('0')" class="btn-primary btn "  style="margin-left: 20px;"/>
+            <input type="button" value=" = " onclick="solve()"  class="btn-danger btn " style="margin-left: 20px;"/>
+            <input type="button" value=" / " onclick="make_String('/')"  class="btn-success btn " style="margin-left: 20px;"/>
+             </div>
+    
+          </form>
+          </div>
+          </center>
+  </div>
+  	</div>
+  </div>  
+     <script type="text/javascript" src="js/calculator.js">
+     	
+     </script>     
+    </body>
+
+</html>
